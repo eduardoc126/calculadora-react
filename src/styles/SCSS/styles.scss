@@ -1,0 +1,103 @@
+body {
+  font-size: 25pt;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fafafa;
+}
+
+.calc {
+  gap: 4px;
+  display: grid;
+  grid-template-areas:
+    "valor valor valor valor"
+    "limpar dividir multiplicar ce"
+    "num7 num8 num9 soma"
+    "num4 num5 num6 subtracao"
+    "num1 num2 num3 total"
+    "ponto num0 virgula total";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px 1px 20px 10px;
+  background: #fff;
+  width: 75%;
+
+  button {
+    color: white;
+    margin: 0 0;
+    padding: 10px;
+    background: #333;
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    box-shadow: 0 0 1px black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  input {
+    grid-area: valor;
+    text-align: right;
+    font-size: 25px;
+    margin-bottom: 20px;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+
+  @for $i from 0 through 9 {
+    #num#{$i} {
+      grid-area: num#{$i};
+    }
+  }
+
+  #subtracao {
+    grid-area: subtracao;
+  }
+
+  #soma {
+    grid-area: soma;
+  }
+
+  button[id="total"] {
+    grid-area: total;
+  }
+
+  #ponto {
+    grid-area: ponto;
+  }
+
+  #virgula {
+    grid-area: virgula;
+  }
+
+  #limpar {
+    grid-area: limpar;
+  }
+
+  #dividir {
+    grid-area: dividir;
+  }
+
+  #multiplicar {
+    grid-area: multiplicar;
+  }
+
+  #ce {
+    grid-area: ce;
+  }
+}

@@ -1,0 +1,111 @@
+body {
+  font-size: 25pt;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fafafa;
+}
+
+.calc {
+  gap: 4px;
+  display: grid;
+  grid-template-areas: "valor valor valor valor" "limpar dividir multiplicar ce" "num7 num8 num9 soma" "num4 num5 num6 subtracao" "num1 num2 num3 total" "ponto num0 virgula total";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px 1px 20px 10px;
+  background: #fff;
+  width: 75%;
+}
+.calc button {
+  color: white;
+  margin: 0 0;
+  padding: 10px;
+  background: #333;
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+  box-shadow: 0 0 1px black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.calc button:hover {
+  opacity: 0.8;
+}
+.calc input {
+  grid-area: valor;
+  text-align: right;
+  font-size: 25px;
+  margin-bottom: 20px;
+  width: 90%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+.calc #num0 {
+  grid-area: num0;
+}
+.calc #num1 {
+  grid-area: num1;
+}
+.calc #num2 {
+  grid-area: num2;
+}
+.calc #num3 {
+  grid-area: num3;
+}
+.calc #num4 {
+  grid-area: num4;
+}
+.calc #num5 {
+  grid-area: num5;
+}
+.calc #num6 {
+  grid-area: num6;
+}
+.calc #num7 {
+  grid-area: num7;
+}
+.calc #num8 {
+  grid-area: num8;
+}
+.calc #num9 {
+  grid-area: num9;
+}
+.calc #subtracao {
+  grid-area: subtracao;
+}
+.calc #soma {
+  grid-area: soma;
+}
+.calc button[id=total] {
+  grid-area: total;
+}
+.calc #ponto {
+  grid-area: ponto;
+}
+.calc #virgula {
+  grid-area: virgula;
+}
+.calc #limpar {
+  grid-area: limpar;
+}
+.calc #dividir {
+  grid-area: dividir;
+}
+.calc #multiplicar {
+  grid-area: multiplicar;
+}
+.calc #ce {
+  grid-area: ce;
+}
+
+/*# sourceMappingURL=styles.css.map */
